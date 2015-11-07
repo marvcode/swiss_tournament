@@ -2,7 +2,7 @@
 #
 #  Written by: Marvin Fuller
 #  Date: Oct 12, 2015
-#  Filename: mftour.py  then later tournament.py
+#  Filename: tournament_test.py
 #  Purpose:
 """        The purpose of this module is an implementation of a
             Swiss-system tournament in python to interact with a PostgreSQL
@@ -11,7 +11,7 @@
 """
 #
 ######################################################################
-#!/usr/bin/python
+# !/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #   import libraries

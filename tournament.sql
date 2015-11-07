@@ -2,7 +2,7 @@
 --#
 --#  Written by: Marvin Fuller
 --#  Date: Oct 12, 2015
---#  Filename: mftour.sql
+--#  Filename: tournament.sql
 --#  Purpose:
 --#          Table & Views definitions for the tournament project.
 --#

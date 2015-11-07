@@ -2,7 +2,7 @@
 #
 #  Written by: Marvin Fuller
 #  Date: Oct 12, 2015
-#  Filename: mftour.py  then later tournament.py --
+#  Filename: tournament.py --
 #  Purpose:
 """         The purpose of this module is an implementation of a
              Swiss-system tournament in python to interact with a PostgreSQL
@@ -22,7 +22,7 @@ def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
     # variables
     dbtable = 'players'
-    pgdatabase = 'mftour'
+    pgdatabase = 'tournament'
     pghost = '10.0.1.38'
     pguser = 'sid'
     pguserpass = 'foo.bar'

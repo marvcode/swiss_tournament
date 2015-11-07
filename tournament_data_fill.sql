@@ -10,9 +10,6 @@
 --#
 --######################################################################
 
--- Connect to database:
---\c tournament
-\c mftour
 
 SET ROLE web; 
 
