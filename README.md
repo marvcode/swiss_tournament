@@ -1,7 +1,8 @@
 
 # Swiss_Tournament
 
-This is a project that implements a Swiss Rules Tournament using a PostgreSQL database.  Essentially this is just a learning project that uses python code to interact with the Postgres database.
+This is a project that implements a Swiss Rules Tournament using a PostgreSQL database.  
+Essentially this is just a learning project that uses python code to interact with the Postgres database.
 
 Udacity FullStack Web Developer NanoDegree - Project #2.
 Written by: Marvin Fuller
@@ -11,30 +12,49 @@ Date: October 12, 2015 - Completed November 8, 2015.
 # Quick Start (How to run the application):
 To run the python application and manage a swiss sytle tournament:
   **Prerequisites:**
-    It is assumed that you have access to a computer running postgreSQL v9.4 or later.  Whether connecting to this computer            locally or remotely, you will need to connect as a superuser (such as 'postgres') and create a database called                  'tournament'.
+    It is assumed that you have access to a computer running postgreSQL v9.4 or later.  
+    Whether connecting to this computer locally or remotely, you will need to 
+    connect as a superuser (such as 'postgres') and create a database called
+    'tournament'.
+    
     The tournament database must have the following roles provisioned:
         Database Owner: Group role: web
-        Database User: login role: sid  (**most queries will be run as login role 'sid', so python application will not work if             these roles are not provisioned correctly.**)
+        Database User: login role: sid  
+        (**most queries will be run as login role 'sid', so python application 
+        will not work if these roles are not provisioned correctly.**)
     
   1. Download the following files to your computer and store them all in the same directory on your computer.
         (tournament.py, tournament_test.py, tournament.sql)
 
         (tournament_data_fill.sql is *Optional*, for those who want to excercise additional testing on the application)
-  2. Create the   
 
+  2. Create the database schema by importing the tournament.sql file.
+     This can be accomplished in a number of ways:
+     For example:
+     A. Use command line on local machine.
+        ```
+        $ psql tournament [username]
+        (depending on permissions, psql will ask for user's password)
+        > \i [fullpath to file]\tournament.sql
+        (this will import the SQL file and setup database tables and Views)
+        ```
+    B. The user may find it easier to use a database administration tool 
+       such as 'pgadmin3'.  This application is available for multiple OS
+       platforms such as Windows, Linux, and Mac  OS.  In the administration 
+       tool, the user can connect to the database and then open a SQL command
+       window to use the SQL code found in the tournament.sql file.
+       
 
+	3. On a Mac, open a terminal window and change the working directory 
+	   to the directory where the files above are stored.
 
+    4. To confirm this, you can type 'pwd' at the command line and the 
+       path shown should match where you have the files stored.
 
-2. On a Mac, open a terminal window and change the working directory to the directory where the files above are stored.
-
-
-
-  3. To confirm this, you can type 'pwd' at the command line and the path shown should match where you have the files stored.
-  4. Then, at the command line, type: 'python mf_movies2.py'
-  5. This will run the application and open a browser window to display the newly created HTML page called Marvin's Favorite Movies.
-
-To see the final web page deployed in production:
-  1. Go to this link www.marvsprojectsite.net, then click on the the link labeled "Marv's Favorite Movies Site".
+    5. Then, at the command line, type: 'python tournamant_test.py'
+    
+    6. This will run the test application and output the results of the 
+       system test for this application.
 
 # Test Output
 
@@ -118,14 +138,21 @@ Success!  All tests pass!
 
 
 
+#Extra Credit features:
 
+###Three features were implemented to qualify for extra credit for this project.
 
+1. Program Enhancement for Extra Credit: Rematch Prevention.  While creating 
+next round pairings, pairs of players were examined rematch condition.  If a 
+rematch was detected , another player was chosen for the pair to prevent a 
+rematch.  This function is demonstrated in the version of the tournament_test.py provided.
 
+2. Program Enhancement for Extra Credit: Support for matches ending in a Draw.
+A function called reportDraw() was created to allow the tournament administrator 
+the ability to record matches that end in a 'draw'.  In this function, a Null 
+value is left in the winner caloumn and a True state is stored in the Draw 
+column of the players table.  This function is demonstrated in the version 
+of the tournament_test.py provided.
 
-#Using the HTML File
-When your browser loads the HTML file, several elements of the Bootstrap framework as well as poster images are pulled from various web resources.  So internet connectivity is required to properly load this page.  
-
-Once the page is loaded, the user can click on any movie poster to view the original theatrical trailer.
-
-Enjoy
-
+3. Program Enhancement for Extra Credit: Views were created in database and 
+used in application to enhance queries.
