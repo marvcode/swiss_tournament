@@ -41,7 +41,7 @@ CREATE VIEW view_standings AS
     SELECT * FROM players ORDER BY wins DESC;
 ALTER VIEW view_standings OWNER TO web;
 
-
+Swiss_
 DROP VIEW IF EXISTS view_players;
 CREATE VIEW view_players AS
     SELECT id,pl_name AS Player FROM players ORDER BY id ASC;
