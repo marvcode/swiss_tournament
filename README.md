@@ -4,9 +4,9 @@
 This is a project that implements a Swiss Rules Tournament using a PostgreSQL database.  
 Essentially, this is just a learning project that uses python code to interact with the Postgres database.
 
-Udacity FullStack Web Developer NanoDegree - Project #2.
-Written by: Marvin Fuller
-Date: October 12, 2015 - Completed November 8, 2015.
+Udacity FullStack Web Developer NanoDegree - Project #2.  
+Written by: Marvin Fuller  
+Date: October 12, 2015 - Completed November 8, 2015.  
 
 
 # Quick Start (How to run the application):
@@ -41,7 +41,7 @@ $ psql tournament [username]
 > \i [fullpath to file]\tournament.sql
 (this will import the SQL file and setup database tables and Views)
 ```
-   B. The user may find it easier to use a database administration tool 
+	B. The user may find it easier to use a database administration tool 
    such as **'pgadmin3'**.  This application is available for multiple OS
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
    tool, the user can connect to the postgres server, create the new tournament
