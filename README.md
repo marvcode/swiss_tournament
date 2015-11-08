@@ -97,67 +97,67 @@ Success!  All tests pass!
 **deletePlayers()**: Remove all the player records from the database.
 
 **registerPlayer(name)**: Adds a player to the tournament database. The database 
-assigns a unique serial id number for the player.
-   Args:
-   name: the player's full name (need not be unique).
+assigns a unique serial id number for the player.  
+Args:  
+  name: the player's full name (need not be unique).
 
-**reportDraw(pl_x, pl_y)**: Records a 'Draw' as the outcome of a single match between two players.
-   Args:
-   pl_x:  the id number of one of the players
-   pl_y:  the id number of another player
+**reportDraw(pl_x, pl_y)**: Records a 'Draw' as the outcome of a single match between two players.  
+Args:  
+  pl_x:  the id number of one of the players  
+  pl_y:  the id number of another player  
 
-**reportMatch(winner, loser)**: Records the outcome of a single match between two players.
-   Args:
-   winner:  the id number of the player who won
-   loser:  the id number of the player who lost
+**reportMatch(winner, loser)**: Records the outcome of a single match between two players.  
+Args:  
+  winner:  the id number of the player who won  
+  loser:  the id number of the player who lost  
             
-**playerStandings()**: Returns a list of the players and their win records, sorted by wins. The first entry in the list is the player in first place, or a player tied for first place if there is currently a tie.
-   Returns:
-   A list of tuples, each of which contains (id, name, wins, matches):
-   id: the player's unique id (assigned by the database)
-   name: the player's full name (as registered)
-   wins: the number of matches the player has won
-   matches: the number of matches the player has played
+**playerStandings()**: Returns a list of the players and their win records, sorted by wins. The first entry in the list is the player in first place, or a player tied for first place if there is currently a tie.  
+Returns:
+  A list of tuples, each of which contains (id, name, wins, matches):  
+   id: the player's unique id (assigned by the database)  
+   name: the player's full name (as registered)  
+   wins: the number of matches the player has won  
+   matches: the number of matches the player has played  
               
 **getPlName(plyr)**: Performs a query on the given player ID and returns the ID and the player's name from the players table
-   of the database.
-   Args:
-   plyr: id number of the player for which the name is needed
-   Return:
-   Return a list containing the player ID and their name.
+   of the database.  
+Args:  
+  plyr: id number of the player for which the name is needed  
+Return:  
+   Return a list containing the player ID and their name.  
 
 **isRematch(pl_x, pl_y)**: Checks the matches table to determine if this player combination is a rematch of the players provided.  
 Args:  
-pl_x: id number of 1st player to be checked for previous pairing  
-pl_y: id number of 2nd player to be checked for previous pairing  
+  pl_x: id number of 1st player to be checked for previous pairing  
+  pl_y: id number of 2nd player to be checked for previous pairing  
 Return:  
-Return a boolean True if the pair is a rematch otherwise False.  
+  Return a boolean True if the pair is a rematch otherwise False.  
 
-**swissPairings()**: Returns a list of pairs of players for the next round of a match. Assuming that there are an even number of     players registered, each player appears exactly once in the pairings.  Each player is paired with another
-   player with an equal or nearly-equal win record, that is, a player adjacent to him or her in the standings.
-   Returns:
-   A list of tuples, each of which contains (id1, name1, id2, name2)
-   id1: the first player's unique id
-   name1: the first player's name
-   id2: the second player's unique id
-   name2: the second player's name
+**swissPairings()**: Returns a list of pairs of players for the next round of a match. Assuming that there are an even number of players registered, each player appears exactly once in the pairings.  Each player is paired with another
+   player with an equal or nearly-equal win record, that is, a player adjacent to him or her in the standings.  
+Returns:
+  A list of tuples, each of which contains (id1, name1, id2, name2)  
+   id1: the first player's unique id  
+   name1: the first player's name  
+   id2: the second player's unique id  
+   name2: the second player's name  
 
 
 #Extra Credit features:
 
 ###Three features were implemented to qualify for extra credit for this project.
 
-1. Program Enhancement for Extra Credit: Rematch Prevention.  While creating 
+1. *Program Enhancement for Extra Credit*: Rematch Prevention.  While creating 
 next round pairings, pairs of players were examined rematch condition.  If a 
 rematch was detected , another player was chosen for the pair to prevent a 
 rematch.  This function is demonstrated in the version of the tournament_test.py provided.
 
-2. Program Enhancement for Extra Credit: Support for matches ending in a Draw.
+2. *Program Enhancement for Extra Credit*: Support for matches ending in a Draw.
 A function called reportDraw() was created to allow the tournament administrator 
 the ability to record matches that end in a 'draw'.  In this function, a Null 
 value is left in the winner column and a True state is stored in the Draw 
 column of the players table.  This function is demonstrated in the version 
 of the tournament_test.py provided.
 
-3. Program Enhancement for Extra Credit: Views were created in database and 
+3. *Program Enhancement for Extra Credit*: Views were created in database and 
 used in application to enhance queries.
