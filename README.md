@@ -19,15 +19,15 @@ connect to postgres as a superuser (such as 'postgres') and create a database ca
 'tournament'.
     
 The tournament database must have the following roles provisioned:
-   Database Owner: Group role: web
-   Database User: Login role: sid  
-   (**most queries will be run as login role 'sid', so python application 
-        will not work if these roles are not provisioned correctly.**)
+Database Owner: Group role: web
+Database User: Login role: sid  
+(**most queries will be run as login role 'sid', so python application 
+will not work if these roles are not provisioned correctly.**)
     
 1. Download the following files to your computer and store them all in the same directory on your computer.
-     (tournament.py, tournament_test.py, tournament.sql)
+     (`tournament.py, tournament_test.py, tournament.sql`)
 
-   (tournament_data_fill.sql is **Optional**, for those who want to excercise 
+   (`tournament_data_fill.sql` is **Optional**, for those who want to exercise 
    additional testing on the application)
 
 2. Create the database schema by importing the tournament.sql file.
@@ -41,26 +41,27 @@ $ psql tournament [username]
 > \i [fullpath to file]\tournament.sql
 (this will import the SQL file and setup database tables and Views)
 ```
-	B. The user may find it easier to use a database administration tool 
+   B. The user may find it easier to use a database administration tool 
    such as **'pgadmin3'**.  This application is available for multiple OS
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
    tool, the user can connect to the postgres server, create the new tournament
    database and then open a SQL command window to use the SQL code found 
    in the tournament.sql file.
 
-**To run the python application:**
-3. On a Mac, open a terminal window and change the working directory 
+### To run the python application:
+
+1. On a Mac, open a terminal window and change the working directory 
    to the directory where the files above are stored.
 
-4. To confirm this, you can type `pwd` at the command line and the 
+2. To confirm this, you can type `pwd` at the command line and the 
    path shown should match where you have the files stored.
 
-5. Then, at the command line, type: `python tournamant_test.py`
+3. Then, at the command line, type: `python tournamant_test.py`
   
-6. This will run the test application and output the results of the 
+4. This will run the test application and output the results of the 
        system test for this application.
 
-# Test Output
+### Test Output
 
 Upon executing 'tournament_test.py' you should see the following output on your screen...
 
