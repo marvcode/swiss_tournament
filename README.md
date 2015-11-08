@@ -34,7 +34,7 @@ will not work if these roles are not provisioned correctly.**)
    This can be accomplished in a number of ways:
    For example:
 
-	A. Use command line on local machine.
+  A. Use command line on local machine.
 ```
 $ psql tournament [username]
 (depending on permissions, psql will ask for user's password)
@@ -42,7 +42,7 @@ $ psql tournament [username]
 (this will import the SQL file and setup database tables and Views)
 ```  
 
-	B. The user may find it easier to use a database administration tool 
+  B. The user may find it easier to use a database administration tool 
    such as **'pgadmin3'**.  This application is available for multiple OS
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
    tool, the user can connect to the postgres server, create the new tournament
