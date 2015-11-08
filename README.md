@@ -15,7 +15,7 @@ To run the python application and manage a swiss sytle tournament:
 **Prerequisites:**
 It is assumed that you have access to a computer running postgreSQL v9.4 or later.  
 Whether connecting to this computer locally or remotely, you will need to 
-connect as a superuser (such as 'postgres') and create a database called
+connect to postgres as a superuser (such as 'postgres') and create a database called
 'tournament'.
     
 The tournament database must have the following roles provisioned:
@@ -31,28 +31,31 @@ The tournament database must have the following roles provisioned:
    additional testing on the application)
 
 2. Create the database schema by importing the tournament.sql file.
-    This can be accomplished in a number of ways:
-    For example:
-    A. Use command line on local machine.
+   This can be accomplished in a number of ways:
+   For example:
+
+	A. Use command line on local machine.
 ```
 $ psql tournament [username]
 (depending on permissions, psql will ask for user's password)
 > \i [fullpath to file]\tournament.sql
 (this will import the SQL file and setup database tables and Views)
 ```
-B. The user may find it easier to use a database administration tool 
-   such as 'pgadmin3'.  This application is available for multiple OS
+	B. The user may find it easier to use a database administration tool 
+   such as **'pgadmin3'**.  This application is available for multiple OS
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
-   tool, the user can connect to the database and then open a SQL command
-   window to use the SQL code found in the tournament.sql file.
+   tool, the user can connect to the postgres server, create the new tournament
+   database and then open a SQL command window to use the SQL code found 
+   in the tournament.sql file.
 
+**To run the python application:**
 3. On a Mac, open a terminal window and change the working directory 
    to the directory where the files above are stored.
 
-4. To confirm this, you can type 'pwd' at the command line and the 
+4. To confirm this, you can type `pwd` at the command line and the 
    path shown should match where you have the files stored.
 
-5. Then, at the command line, type: 'python tournamant_test.py'
+5. Then, at the command line, type: `python tournamant_test.py`
   
 6. This will run the test application and output the results of the 
        system test for this application.
@@ -116,11 +119,11 @@ assigns a unique serial id number for the player.
    matches: the number of matches the player has played
               
 **getPlName(plyr)**: Performs a query on the given player ID and returns the ID and the player's name from the players table
-        of the database.
-          Args:
-            plyr: id number of the player for which the name is needed
-          Return:
-            Return a list containing the player ID and their name.
+   of the database.
+   Args:
+   plyr: id number of the player for which the name is needed
+   Return:
+   Return a list containing the player ID and their name.
 
 **isRematch(pl_x, pl_y)**: Checks the matches table to determine if this player combination is a rematch of the players provided.
    Args:
