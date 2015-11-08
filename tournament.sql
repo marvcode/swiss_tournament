@@ -36,12 +36,14 @@ ALTER TABLE matches OWNER TO web;
 
 
 -- create views for listing tables and databases
+-- create view
 DROP VIEW IF EXISTS view_standings;
 CREATE VIEW view_standings AS
     SELECT * FROM players ORDER BY wins DESC;
 ALTER VIEW view_standings OWNER TO web;
 
-Swiss_
+
+-- create view
 DROP VIEW IF EXISTS view_players;
 CREATE VIEW view_players AS
     SELECT id,pl_name AS Player FROM players ORDER BY id ASC;
