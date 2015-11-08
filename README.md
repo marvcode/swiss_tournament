@@ -40,7 +40,8 @@ $ psql tournament [username]
 (depending on permissions, psql will ask for user's password)
 > \i [fullpath to file]\tournament.sql
 (this will import the SQL file and setup database tables and Views)
-```
+```  
+
 	B. The user may find it easier to use a database administration tool 
    such as **'pgadmin3'**.  This application is available for multiple OS
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
