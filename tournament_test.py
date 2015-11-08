@@ -15,8 +15,8 @@
 # -*- coding: utf-8 -*-
 
 #   import libraries
-from mftour import *
-from pprint import pprint
+from tournament import *
+
 
 player_count = countPlayers()
 
