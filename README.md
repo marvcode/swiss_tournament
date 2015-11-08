@@ -34,7 +34,7 @@ will not work if these roles are not provisioned correctly.**)
    This can be accomplished in a number of ways:
    For example:  
 
-  A. Use command line on local machine.
+  A. Use command line on local machine.  
 ```
 $ psql tournament [username]
 (depending on permissions, psql will ask for user's password)
@@ -47,7 +47,7 @@ $ psql tournament [username]
    platforms such as Windows, Linux, and Mac  OS.  In the administration 
    tool, the user can connect to the postgres server, create the new tournament
    database and then open a SQL command window to use the SQL code found 
-   in the tournament.sql file.
+   in the tournament.sql file.  
 
 ### To run the python application:
 
