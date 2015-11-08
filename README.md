@@ -32,7 +32,7 @@ will not work if these roles are not provisioned correctly.**)
 
 2. Create the database schema by importing the tournament.sql file.
    This can be accomplished in a number of ways:
-   For example:
+   For example:  
 
   A. Use command line on local machine.
 ```
