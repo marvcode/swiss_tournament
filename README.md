@@ -127,11 +127,11 @@ assigns a unique serial id number for the player.
    Return a list containing the player ID and their name.
 
 **isRematch(pl_x, pl_y)**: Checks the matches table to determine if this player combination is a rematch of the players provided.
-   Args:
-   pl_x: id number of 1st player to be checked for previous pairing
-   pl_y: id number of 2nd player to be checked for previous pairing
-   Return:
-   Return a boolean True if the pair is a rematch otherwise False.
+.Args:
+..pl_x: id number of 1st player to be checked for previous pairing
+..pl_y: id number of 2nd player to be checked for previous pairing
+.Return:
+..Return a boolean True if the pair is a rematch otherwise False.
 
 **swissPairings()**: Returns a list of pairs of players for the next round of a match. Assuming that there are an even number of     players registered, each player appears exactly once in the pairings.  Each player is paired with another
    player with an equal or nearly-equal win record, that is, a player adjacent to him or her in the standings.
