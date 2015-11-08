@@ -18,8 +18,8 @@ Whether connecting to this computer locally or remotely, you will need to
 connect to postgres as a superuser (such as 'postgres') and create a database called
 'tournament'.
     
-The tournament database must have the following roles provisioned:
-Database Owner: Group role: web
+The tournament database must have the following roles provisioned:  
+Database Owner: Group role: web  
 Database User: Login role: sid  
 (**most queries will be run as login role 'sid', so python application 
 will not work if these roles are not provisioned correctly.**)
